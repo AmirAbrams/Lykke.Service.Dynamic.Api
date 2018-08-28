@@ -164,7 +164,7 @@ namespace NBitcoin.Dynamic
 		private static uint256 GetPoWHash(BlockHeader header)
 		{
 			var headerBytes = header.ToBytes();
-			var h = Crypto.Argon2d_Dynamic.Hash(headerBytes);
+			var h = Crypto.Argon2d.Dynamic.Hash(headerBytes);
 			return new uint256(h);
 		}
 
